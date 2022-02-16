@@ -213,11 +213,11 @@ class MainWindow:
     # Insert file contents into text areas and highlight differences
     def diff_files_into_text_areas(self):
         try:
-            leftFileContents = open(self.leftFile).read()
+            leftFileContents = open(self.leftFile, encoding='utf8').read()
         except:
             leftFileContents = ''
         try:
-            rightFileContents = open(self.rightFile).read()
+            rightFileContents = open(self.rightFile, encoding='utf8').read()
         except:
             rightFileContents = ''
 
